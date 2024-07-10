@@ -1,23 +1,39 @@
+package CurrencyConverter;
+
 import java.util.List;
 import java.util.Scanner;
 
+import static java.lang.System.exit;
+
 public class UserMenu {
 
-    public static InitialCurrency displayMenu(String message, List<InitialCurrency> currency) {
-        System.out.println(message);
+    public static InitialCurrency displayMenu(Boolean initialMessage, List<InitialCurrency> currency) {
+
+        if (initialMessage) {
+            System.out.println("Select the initial currency:");
+        } else System.out.println("Choose the target currency:");
+
 
         for (int i = 0; i < currency.size(); i++) {
             System.out.println((i + 1) + "." + currency.get(i).getNameOfInitialCurrency());
         }
-        System.out.println("0.Exit");
 
-        boolean choice = true;
+        if (initialMessage) {
+            System.out.println("99. Display the conversion history");
+        }
+
+        System.out.println("0. Exit");
+
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
             int currencyIndex = scanner.nextInt();
             if ((currencyIndex >= 0) && currencyIndex <= currency.size()) {
                 return currency.get(currencyIndex - 1);
+            } else if (currencyIndex == 0) {
+                exit(0);
+            } else if (currencyIndex == 99 && initialMessage) {
+                return null;
             }
         }
     }

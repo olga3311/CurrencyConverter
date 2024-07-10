@@ -1,3 +1,5 @@
+package CurrencyConverter;
+
 import java.util.Objects;
 
 public class InitialCurrency {
