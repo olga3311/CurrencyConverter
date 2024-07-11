@@ -16,16 +16,17 @@ public class Main {
 
         Calculator calculator = new Calculator();
 
+        UserMenu userMenu = new UserMenu();
         while (true) {
-            InitialCurrency x = UserMenu.displayMenu(true, currencies);
+            InitialCurrency x = userMenu.displayMenu(true, currencies);
 
             if (x == null) {
                 //  вызвать метод для истории обмена
                 calculator.displayTransactions();
 
             } else {
-                double v = UserMenu.readAmount();
-                InitialCurrency y = UserMenu.displayMenu(false, currencies);
+                double v = userMenu.readAmount();
+                InitialCurrency y = userMenu.displayMenu(false, currencies);
 
                double result = calculator.exchange (x, y, v);
                 System.out.println("You receive: " + result + " " + y.getNameOfInitialCurrency());
