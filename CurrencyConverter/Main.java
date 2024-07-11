@@ -6,10 +6,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-        List<InitialCurrency> currencies = new ArrayList<>();
-        currencies.add(new InitialCurrency("EURO", 1));
-        currencies.add(new InitialCurrency("USD", 0.92));
-        currencies.add(new InitialCurrency("GBP", 1.18));
+        List<Currency> currencies = new ArrayList<>();
+        currencies.add(new Currency("EURO", 1));
+        currencies.add(new Currency("USD", 0.92));
+        currencies.add(new Currency("GBP", 1.18));
 
 
         System.out.println("You are welcome in currency converter!");
@@ -17,7 +17,7 @@ public class Main {
         Calculator calculator = new Calculator();
 
         while (true) {
-            InitialCurrency x = UserMenu.displayMenu(true, currencies);
+            Currency x = UserMenu.displayMenu(true, currencies);
 
             if (x == null) {
                 //  вызвать метод для истории обмена
@@ -25,10 +25,10 @@ public class Main {
 
             } else {
                 double v = UserMenu.readAmount();
-                InitialCurrency y = UserMenu.displayMenu(false, currencies);
+                Currency y = UserMenu.displayMenu(false, currencies);
 
                double result = calculator.exchange (x, y, v);
-                System.out.println("You receive: " + result + " " + y.getNameOfInitialCurrency());
+                System.out.println("You receive: " + result + " " + y.getName());
                 System.out.println("=======================================");
 
             }
