@@ -13,8 +13,8 @@ public class Currency {
     /**поле коэфициент которое означает курс валюты*/
     private double coefficient;
 
-    public Currency(String nameOfInitialCurrency, double coefficient) {
-        this.name = nameOfInitialCurrency;
+    public Currency(String name, double coefficient) {
+        this.name = name;
         this.coefficient = coefficient;
     }
 
