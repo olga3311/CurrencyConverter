@@ -4,23 +4,22 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Calculator {
-    private List<Transaction> transactions = new ArrayList<>();
 
+   public TransactionHistory transactionHistory = new TransactionHistory();
 
     public double exchange(InitialCurrency initialCurrency, InitialCurrency targetCurrency, double amount) {
         if (initialCurrency == targetCurrency) {
             return amount;
         } else {
             double result = (amount * initialCurrency.getCoefficient() / targetCurrency.getCoefficient());
-            Transaction transaction = new Transaction(initialCurrency, targetCurrency, amount, result);
-            transactions.add(transaction);
+            transactionHistory.addTransaction(amount, initialCurrency.getNameOfInitialCurrency(), result, targetCurrency.getNameOfInitialCurrency());
             return result;
         }
 
     }
 
     public void displayTransactions() {
-        System.out.println(transactions);
+        transactionHistory.printTransactions();
     }
 
 
