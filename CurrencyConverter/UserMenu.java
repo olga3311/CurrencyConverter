@@ -7,22 +7,12 @@ import static java.lang.System.exit;
 
 public class UserMenu {
 
-    public static InitialCurrency displayMenu(Boolean initialMessage, List<InitialCurrency> currency) {
 
-        if (initialMessage) {
-            System.out.println("Select the initial currency:");
-        } else System.out.println("Choose the target currency:");
+    public static Currency displayMenu(Boolean initialMessage, List<Currency> currency) {
 
+   
+        UserMenuMessage.displayMenu(initialMessage, currency);
 
-        for (int i = 0; i < currency.size(); i++) {
-            System.out.println((i + 1) + "." + currency.get(i).getNameOfInitialCurrency());
-        }
-
-        if (initialMessage) {
-            System.out.println("99. Display the conversion history");
-        }
-
-        System.out.println("0. Exit");
 
         Scanner scanner = new Scanner(System.in);
 
@@ -39,7 +29,7 @@ public class UserMenu {
     }
 
 
-    public static Double readAmount() {
+    public Double readAmount() {
         Scanner scanner = new Scanner(System.in);
         while (true) {
             System.out.println("Enter the amount: ");
