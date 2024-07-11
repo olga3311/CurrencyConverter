@@ -7,7 +7,6 @@ public class Calculator {
     private List<Transaction> transactions = new ArrayList<>();
 
 
-
     public double exchange(InitialCurrency initialCurrency, InitialCurrency targetCurrency, double amount) {
         if (initialCurrency == targetCurrency) {
             return amount;
@@ -19,11 +18,10 @@ public class Calculator {
         }
 
     }
-public void displayTransactions(){
 
-
-    System.out.println(transactions);
-}
+    public void displayTransactions() {
+        System.out.println(transactions);
+    }
 
 
 }
