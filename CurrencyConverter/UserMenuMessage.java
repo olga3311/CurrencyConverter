@@ -3,7 +3,7 @@ package CurrencyConverter;
 import java.util.List;
 
 public class UserMenuMessage {
-    public static void displayMenu(Boolean initialMessage, List<InitialCurrency> currency) {
+    public static void displayMenu(Boolean initialMessage, List<Currency> currency) {
 
         if (initialMessage) {
             System.out.println("Select the initial currency:");
@@ -11,7 +11,7 @@ public class UserMenuMessage {
 
 
         for (int i = 0; i < currency.size(); i++) {
-            System.out.println((i + 1) + "." + currency.get(i).getNameOfInitialCurrency());
+            System.out.println((i + 1) + "." + currency.get(i).getName());
         }
 
         if (initialMessage) {
