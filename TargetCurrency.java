@@ -1,10 +1,12 @@
 import java.util.Objects;
 
 public class TargetCurrency {
+
     private String nameOfTargetCurrency;
 
     public TargetCurrency(String nameOfTargetCurrency) {
         this.nameOfTargetCurrency = nameOfTargetCurrency;
+
     }
 
     public String getNameOfTargetCurrency() {
@@ -13,13 +15,6 @@ public class TargetCurrency {
 
     public void setNameOfTargetCurrency(String nameOfTargetCurrency) {
         this.nameOfTargetCurrency = nameOfTargetCurrency;
-    }
-
-    @Override
-    public String toString() {
-        return "TargetCurrency{" +
-                "nameOfTargetCurrency='" + nameOfTargetCurrency + '\'' +
-                '}';
     }
 
     @Override
@@ -34,4 +29,12 @@ public class TargetCurrency {
     public int hashCode() {
         return Objects.hashCode(nameOfTargetCurrency);
     }
+
+    @Override
+    public String toString() {
+        return "TargetCurrency{" +
+                "nameOfTargetCurrency='" + nameOfTargetCurrency + '\'' +
+                '}';
+    }
 }
+
