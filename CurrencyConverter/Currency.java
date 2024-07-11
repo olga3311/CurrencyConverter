@@ -1,9 +1,16 @@
 package CurrencyConverter;
 
 import java.util.Objects;
+/**
+ * класс валюта со свойствами <b>mane</b> и <b>coefficient</b>
+ * @author Maxim Nikolus
+ * @version фиг знает какая:)
+ */
 
 public class Currency {
+    /**поле имя оно же название  валюты*/
     private String name;
+    /**поле коэфициент которое означает курс валюты*/
     private double coefficient;
 
     public Currency(String nameOfInitialCurrency, double coefficient) {
@@ -29,7 +36,10 @@ public class Currency {
 
     @Override
     public String toString() {
-        return "InitialCurrency{" +
+     /**
+      * @return возвращает валюту её имя и курс
+      * */
+        return "Currency{" +
                 "name='" + name + '\'' +
                 ", coefficient=" + coefficient +
                 '}';
