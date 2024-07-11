@@ -1,7 +1,8 @@
 package CurrencyConverter;
 
-public class Transaction {
+import java.text.SimpleDateFormat;
 
+public class Transaction {
 
     private String timeStamp;
     private double amount;
@@ -16,6 +17,8 @@ public class Transaction {
         this.fromCurrency = fromCurrency;
         this.convertedAmount = convertedAmount;
         this.toCurrency = toCurrency;
+        this.timeStamp = new SimpleDateFormat("HH.mm.ss-dd.MM.yyyy").format(new java.util.Date());
+
     }
 
 
