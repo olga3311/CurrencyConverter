@@ -18,12 +18,12 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
+        return "Transaction:" +
                 "timeStamp='" + timeStamp + '\'' +
                 ", amount=" + amount +
-                ", fromCurrency='" + fromCurrency + '\'' +
+                ", from'" + fromCurrency + '\'' +
                 ", convertedAmount=" + convertedAmount +
-                ", toCurrency='" + toCurrency + '\'' +
+                ", to" + toCurrency + '\'' +
                 '}';
     }
 }
