@@ -7,9 +7,12 @@ import static java.lang.System.exit;
 
 public class UserMenu {
 
-    public  InitialCurrency displayMenu(Boolean initialMessage, List<InitialCurrency> currency) {
 
+    public static Currency displayMenu(Boolean initialMessage, List<Currency> currency) {
+
+   
         UserMenuMessage.displayMenu(initialMessage, currency);
+
 
         Scanner scanner = new Scanner(System.in);
 
