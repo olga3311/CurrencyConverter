@@ -25,12 +25,12 @@ public class Transaction {
 
     @Override
     public String toString() {
-        return "Transaction{" +
-                "timeStamp='" + timeStamp + '\'' +
-                ", amount=" + amount +
-                ", from'" + fromCurrency + '\'' +
-                ", convertedAmount=" + convertedAmount +
-                ", to'" + toCurrency + '\'' +
+        return "Transaction :" +
+                "timeStamp " + timeStamp + '\'' +
+                "  amount " + amount +
+                "  from " + fromCurrency + '\'' +
+                "for " + convertedAmount +
+                "  " + toCurrency + '\'' +
                 '}';
 /**
  * Переопределение метода toString() для класса Transaction.
