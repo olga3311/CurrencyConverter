@@ -12,7 +12,8 @@ public class Calculator {
             return amount;
         } else {
             double result = (amount * initialCurrency.getCoefficient() / targetCurrency.getCoefficient());
-            transactionHistory.addTransaction(amount, initialCurrency.getNameOfInitialCurrency(), result, targetCurrency.getNameOfInitialCurrency());
+            transactionHistory.addTransaction(amount, initialCurrency.getNameOfInitialCurrency(), result, targetCurrency
+                    .getNameOfInitialCurrency());
             return result;
         }
 
