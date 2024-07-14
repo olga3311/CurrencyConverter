@@ -33,9 +33,8 @@ public class Transaction {
                 "  " + toCurrency + '\'' +
                 '}';
 /**
+ @author Vadim Danilchenko
  * в этом методе происходит Переопределение метода toString() для класса Transaction.
-
- *
 
  *  @Override
  *  public String toString() {
