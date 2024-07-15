@@ -2,7 +2,10 @@ package CurrencyConverter;
 
 import java.util.ArrayList;
 import java.util.List;
+
 /**
+ * @author Vadim Danilchenko
+ *
  * Класс TransactionHistory сохраняет все транзакции.
  */
 public class TransactionHistory {
