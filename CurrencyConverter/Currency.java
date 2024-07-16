@@ -3,6 +3,7 @@ package CurrencyConverter;
 import java.util.Objects;
 /**
  * класс валюта со свойствами <b>mane</b> и <b>coefficient</b>
+ * является классом который используется в других классах
  * @author Maxim Nikolus
  * @version фиг знает какая:)
  */
@@ -34,11 +35,12 @@ public class Currency {
         this.coefficient = coefficient;
     }
 
+    /**
+     * @return возвращает валюту её имя и курс
+     * */
     @Override
     public String toString() {
-     /**
-      * @return возвращает валюту её имя и курс
-      * */
+
         return "Currency{" +
                 "name='" + name + '\'' +
                 ", coefficient=" + coefficient +
