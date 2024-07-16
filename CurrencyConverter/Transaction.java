@@ -26,24 +26,24 @@ public class Transaction {
     @Override
     public String toString() {
         return "Transaction :" +
-                "timeStamp " + timeStamp + '\'' +
+                " " + timeStamp + '\'' +
                 "  amount " + amount +
                 "  from " + fromCurrency + '\'' +
-                "for " + convertedAmount +
+                "to " + convertedAmount +
                 "  " + toCurrency + '\'' +
                 '}';
 /**
- * Переопределение метода toString() для класса Transaction.
-                * @return    строковое представление объекта Transaction.
+ @author Vadim Danilchenko
+ * в этом методе происходит Переопределение метода toString() для класса Transaction.
 
-      *  @Override
-      *  public String toString() {
-            return "Transaction{" +
-                    "timeStamp='" + timeStamp + '\'' +   Временная метка транзакции
-                    ", amount=" + amount +               Сумма транзакции
-                    ", from'" + fromCurrency + '\'' +    Исходная валюта
+ *  @Override
+ *  public String toString() {
+            return "Transaction" +
+                    "timeStamp='" + timeStamp + '\'' +         Временная метка транзакции
+                    ", amount=" + amount +                     Сумма транзакции
+                    ", from'" + fromCurrency + '\'' +          Исходная валюта
                     ", convertedAmount=" + convertedAmount +   Сумма после конвертации
-                    ", to'" + toCurrency + '\'' +        Целевая валюта
+                    ", to'" + toCurrency + '\'' +              Целевая валюта
                     '}';*/
 
     }
